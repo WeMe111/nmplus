@@ -4,44 +4,62 @@
 2022.04.11 ~ 2022.04.18 (7일)
 ## 기타
 ### 개발환경 셋팅
-#### 프로젝트 환경
+#### 프로젝트 환경(2022.04.14) 
 - WINDOWS10
 - STS4
 - MySQL 8.0.28
 - Apache Tomcat 8.5
 - JAVA 11  
-#### 순서
-1. STS 설치
-2. STS3 Tool 설치
-3. 이클립스 인코딩 설정 변경
-4. MVC 프로젝트 생성 및 스프링 버전 변경
-5. 프로젝트 자바(JDK, 컴파일러) 버전 변경
-6. 라이브러리 추가 및 변경
+#### 순서(2022.04.14) 
+[1. STS 설치](#1.STS-설치)    
+2. STS3 Tool 설치  
+3. 이클립스 인코딩 설정 변경  
+4. 프로젝트 생성 및 스프링 버전 변경   
+5. 프로젝트 자바(JDK, 컴파일러) 버전 변경 
+6. JDBC 연결 
+7. 커넥션 풀(HikariCP) 설정  
+8. DataSource 설정 (root-context.xml)
+9. MyBatis 라이브러리 추가 및 SQLSessionFactory 설정
+10. Servlet 버전 변경
+11. 필수 패키지 추가 및 설정
+12. 아파치 톰캣 연동
 ##### 1.STS 설치
 STS 홈페이지에 들어가 stsTool 다운 받고 Help -> Eclipse Maketplace 들어가서 stsTool3을 다운 받는다.  
 ![sts]()  
+##### 3.이클립스 인코딩 설정 변경
 Windows -> Preferences -> General -> Workpace에서 UTF-8로 바꿔준다.  
 ![sts]()   
+##### 4.프로젝트 생성 및 스프링 버전 변경
 Spring Legacy Project를 생성하고 pox.xml에서 스프링 버전을 바꿔준다.  
+[Spring Legacy와 Spring Boot 비교](https://kimdonghyungsoo.tistory.com/5)  
 ![sts]()   
+##### 5.프로젝트 자바(JDK, 컴파일러) 버전 변경
 프로젝트폴더 우클릭 -> Preferences -> Project Facets 들어가서 맞는 버전으로 설정해준다.  
 ![sts]()   
-#### 스프링과 데이터베이스 준비
-사진 
-
-#### 스프링과 데이터베이스 연동
+##### 6.JDBC 연결
 MySQL 8.0.28(22.04.18기준) 다운 받고 아이디 비번 설정 해주고 pom.xml에 MySQL 설정 해준다.  
-![sts]()
-#### 게시물 목록 페이지 구현
--
-#### 게시물 작성 구현
--
-#### 게시물 조회 구현
--
-#### 게시물 수정 구현
--
-#### 게시물 삭제 구현
--
+![sts]()  
+##### 7. 커넥션 풀(HikariCP) 설정 
+JAVA 8, 9, 10, 11을 사용하는 경우 HikariCP 4.0.2 이상 버전을 사용해줘야 한다.  
+[커넥션 풀 이란?](https://programmer93.tistory.com/74)  
+![sts]()  
+##### 8.DataSource 설정 (root-context.xml)
+![sts]()  
+##### 9. MyBatis 라이브러리 추가 및 SQLSessionFactory 설정
+[MyBatis 란?](https://hororolol.tistory.com/507)  
+![sts]() 
+![sts]() 
+#### 10. Servlet 버전 변경
+Java 설정 등을 이용하기 위해서 servlet 3.0 이상 버전으로 변경해줍니다. [pom.xml]에 있는 기존의 servlet 2.5 버전은 주석 처리 혹은 삭제한 후 servlet 3.1 버전을 추가 및 저장합니다.  
+![sts]() 
+#### 11. 필수 패키지 추가 및 설정
+![sts]()  
+![sts]()  
+##### Mapper XML 저장 경로 생성
+![sts]() 
+
+#### 12. 아파치 톰캣 연동
+[아파치 톰캣 연동](https://mindolsj-dev.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EA%B0%9C%EB%B0%9CTomCat%EC%84%A4%EC%B9%98-%EC%8A%A4%ED%94%84%EB%A7%81-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%97%B0%EB%8F%99)  
 
 ### BootStrap(2022.04.14)  
 #### BootStrap 이란?  
@@ -66,18 +84,4 @@ MySQL 8.0.28(22.04.18기준) 다운 받고 아이디 비번 설정 해주고 pom
 
 ### 오류 및 해결 방법
 #### 개발환경 셋팅
-- 
-#### 스프링과 데이터베이스 준비
--
-#### 스프링과 데이터베이스 연동
--
-#### 게시물 목록 페이지 구현
--
-#### 게시물 작성 구현
--
-#### 게시물 조회 구현
--
-#### 게시물 수정 구현
--
-#### 게시물 삭제 구현
--
+
