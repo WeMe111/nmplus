@@ -2,28 +2,32 @@
 ## 기획/설계
 ### 프로젝트 기간
 2022.04.11 ~ 2022.04.18 (7일)
-### 개발환경
-**OS**: Windows10  
-**DataBase**: MySQL  
-**Service System**: Apache Tomcat(8.5)  
-**Framwork**: Spring3  
-**언어**: JAVA(JDK1.8), JSP, HTML, CSS, Javascript  
-**Tool**: eclipse, MySQL  
-**Eclipse Plugin**: Emmet  
-### 데이터베이스 테이블 구조
-1. board 게시판에 필요한 정보 수록  
-
-|제목|내용|설명|설명|
-|------|---|---|---|
-|테스트1|테스트2|테스트3|테스트4|
-|테스트1|테스트2|테스트3|테스트4|
-|테스트1|테스트2|테스트3|테스트4|
-
-## 로드맵
-
 ## 기타
 ### 개발환경 셋팅
-- 
+#### 프로젝트 환경
+- WINDOWS10
+- STS4
+- MySQL 8.0.28
+- Apache Tomcat 8.5
+- JAVA 11  
+#### 순서
+1. STS 설치
+2. STS3 Tool 설치
+3. 이클립스 인코딩 설정 변경
+4. MVC 프로젝트 생성 및 스프링 버전 변경
+5. 프로젝트 자바(JDK, 컴파일러) 버전 변경
+6. 라이브러리 추가 및 변경
+##### 1.STS 설치
+STS 홈페이지에 들어가 stsTool 다운 받고 Help -> Eclipse Maketplace 들어가서 stsTool3을 다운 받는다.  
+![sts]()  
+Windows -> Preferences -> General -> Workpace에서 UTF-8로 바꿔준다.  
+![sts]()   
+Spring Legacy Project를 생성하고 pox.xml에서 스프링 버전을 바꿔준다.  
+![sts]()   
+프로젝트폴더 우클릭 -> Preferences -> Project Facets 들어가서 맞는 버전으로 설정해준다.  
+![sts]()   
+
+
 ### 스프링과 데이터베이스 준비
 -
 ### 스프링과 데이터베이스 연동
