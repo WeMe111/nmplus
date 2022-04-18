@@ -25,38 +25,38 @@
 12. 아파치 톰캣 연동
 ##### 1.STS 설치
 STS 홈페이지에 들어가 stsTool 다운 받고 Help -> Eclipse Maketplace 들어가서 stsTool3을 다운 받는다.  
-![sts]()  
+![sts](https://user-images.githubusercontent.com/94879395/163827039-5798b33c-90fe-4e42-aba9-e8676660e318.PNG)  
 ##### 3.이클립스 인코딩 설정 변경
 Windows -> Preferences -> General -> Workpace에서 UTF-8로 바꿔준다.  
-![sts]()   
+![sts](https://user-images.githubusercontent.com/94879395/163827029-1b8e126e-ddf8-4772-a66d-1f23b321bdf6.PNG)   
 ##### 4.프로젝트 생성 및 스프링 버전 변경
 Spring Legacy Project를 생성하고 pox.xml에서 스프링 버전을 바꿔준다.  
 [Spring Legacy와 Spring Boot 비교](https://kimdonghyungsoo.tistory.com/5)  
-![sts]()   
+![sts](https://user-images.githubusercontent.com/94879395/163827031-742cf9df-ae49-4ab0-a4b8-30b3f3837438.PNG)   
 ##### 5.프로젝트 자바(JDK, 컴파일러) 버전 변경
 프로젝트폴더 우클릭 -> Preferences -> Project Facets 들어가서 맞는 버전으로 설정해준다.  
-![sts]()   
+![sts](https://user-images.githubusercontent.com/94879395/163827034-42607c9a-a2a3-4522-9793-a5802c0fe334.PNG)   
 ##### 6.JDBC 연결
 MySQL 8.0.28(22.04.18기준) 다운 받고 아이디 비번 설정 해주고 pom.xml에 MySQL 설정 해준다.  
-![sts]()  
+![sts](https://user-images.githubusercontent.com/94879395/163827035-ce85408a-e755-49a9-8595-224953e81dc5.PNG)  
 ##### 7. 커넥션 풀(HikariCP) 설정 
 JAVA 8, 9, 10, 11을 사용하는 경우 HikariCP 4.0.2 이상 버전을 사용해줘야 한다.  
 [커넥션 풀 이란?](https://programmer93.tistory.com/74)  
-![sts]()  
+![sts](https://user-images.githubusercontent.com/94879395/163827043-c19863e5-391b-4a39-8534-c3c11ff7541d.PNG)  
 ##### 8.DataSource 설정 (root-context.xml)
-![sts]()  
+![sts](https://user-images.githubusercontent.com/94879395/163827023-392e6439-f6d5-4ab2-8ec5-5f0a53250a9b.PNG)  
 ##### 9. MyBatis 라이브러리 추가 및 SQLSessionFactory 설정
 [MyBatis 란?](https://hororolol.tistory.com/507)  
-![sts]() 
-![sts]() 
+![sts](https://user-images.githubusercontent.com/94879395/163827024-d1fc76c8-585d-4cfc-9ed4-2d1b40450a4b.PNG) 
+![sts](https://user-images.githubusercontent.com/94879395/163827037-5a7e1e10-3c89-4001-bc2f-8df3bcbb165c.PNG) 
 #### 10. Servlet 버전 변경
 Java 설정 등을 이용하기 위해서 servlet 3.0 이상 버전으로 변경해줍니다. [pom.xml]에 있는 기존의 servlet 2.5 버전은 주석 처리 혹은 삭제한 후 servlet 3.1 버전을 추가 및 저장합니다.  
-![sts]() 
+![sts](https://user-images.githubusercontent.com/94879395/163827025-fc1b9ec5-e63a-4727-9649-e665d86d9c5a.PNG) 
 #### 11. 필수 패키지 추가 및 설정
-![sts]()  
-![sts]()  
+![sts](https://user-images.githubusercontent.com/94879395/163827047-f32922fc-6efe-4a65-93fe-3730798b8311.PNG)  
+![sts](https://user-images.githubusercontent.com/94879395/163827051-a34b897e-47fa-425f-9715-7315a135f2c8.PNG)  
 ##### Mapper XML 저장 경로 생성
-![sts]() 
+![sts](https://user-images.githubusercontent.com/94879395/163827053-8708d2a5-7727-4fac-83e2-b9801a50dc85.PNG) 
 
 #### 12. 아파치 톰캣 연동
 [아파치 톰캣 연동](https://mindolsj-dev.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EA%B0%9C%EB%B0%9CTomCat%EC%84%A4%EC%B9%98-%EC%8A%A4%ED%94%84%EB%A7%81-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%97%B0%EB%8F%99)  
