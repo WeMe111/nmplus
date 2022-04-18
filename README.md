@@ -53,7 +53,10 @@ JAVA 8, 9, 10, 11을 사용하는 경우 HikariCP 4.0.2 이상 버전을 사용�
 Java 설정 등을 이용하기 위해서 servlet 3.0 이상 버전으로 변경해줍니다. [pom.xml]에 있는 기존의 servlet 2.5 버전은 주석 처리 혹은 삭제한 후 servlet 3.1 버전을 추가 및 저장합니다.  
 ![sts](https://user-images.githubusercontent.com/94879395/163827025-fc1b9ec5-e63a-4727-9649-e665d86d9c5a.PNG) 
 #### 11. 필수 패키지 추가 및 설정
+스프링에서 각 패키지를 인식 할 수 있도록 [root-context.xml] 파일 설정을 변경해주어야 합니다.  
+ [root-context.xml] 파일을 연 후 하단의 [namespaces]를 클릭 해당 창을 엽니다. "context", "mybatis-spring"을 체크하여  
 ![sts](https://user-images.githubusercontent.com/94879395/163827047-f32922fc-6efe-4a65-93fe-3730798b8311.PNG)  
+저장 후 다시 하단의 [Source] 탭을 누른 후 아래의 코드를 추가합니다. 
 ![sts](https://user-images.githubusercontent.com/94879395/163827051-a34b897e-47fa-425f-9715-7315a135f2c8.PNG)  
 ##### Mapper XML 저장 경로 생성
 ![sts](https://user-images.githubusercontent.com/94879395/163827053-8708d2a5-7727-4fac-83e2-b9801a50dc85.PNG) 
