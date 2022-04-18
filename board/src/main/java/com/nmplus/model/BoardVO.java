@@ -13,7 +13,7 @@ public class BoardVO {
 	/* 게시판 내용 */
 	private String content;
 
-	/* 게시판 작가 */
+	/* 게시판 작성자 */
 	private String writer;
 
 	/* 등록 날짜 */
