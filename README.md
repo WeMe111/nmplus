@@ -2,7 +2,7 @@
 ## 기획/설계
 ### 프로젝트 기간
 2022.04.11 ~ 2022.04.18 (7일)
-## 기타
+## 진행순서
 ### 개발환경 셋팅
 #### 프로젝트 환경(2022.04.14) 
 - WINDOWS10
@@ -64,6 +64,42 @@ Java 설정 등을 이용하기 위해서 servlet 3.0 이상 버전으로 변경
 #### 12. 아파치 톰캣 연동
 [아파치 톰캣 연동](https://mindolsj-dev.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EA%B0%9C%EB%B0%9CTomCat%EC%84%A4%EC%B9%98-%EC%8A%A4%ED%94%84%EB%A7%81-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%97%B0%EB%8F%99)  
 
+## 오류 및 해결 방법(※오타를 주의 하자!!)
+### 개발환경 셋팅
+#### Spring Legacy Project 생성 오류
+이런 오류가 뜨는 이유는 여러이유가 있다.   
+![프로젝트생성오류]()  
+1.JDK버전이 너무 낮거나 높은 경우 이다. 
+처음 1.8을 사용했지만 오류가 나서 11로 변경 해줬다. 
+2.JVM을 찾기 모하여 발생하는 이유이다.  
+![프로젝트생성오류]()  
+SpringToolSuite4.ini 텍스트 파일로 열어서 그림 처럼 경로를 지정해주면 프로젝트가 잘 생성된다.  
+-vm  
+C:\Program Files\Java\jdk-11.0.12\bin\javaw.exe   
+![프로젝트생성오류]()  
+#### root-context.xml파일에 Namepaces탭이 없음
+이유는 2가지이다.
+1.spring tools 3 add-on for spring을 설치를 안해서 이다.  
+스프링 마켓 플레이스에 들어가서 spring tools 3 add-on for spring 업데이트 및 인스톨을 해주자.  
+![namespaces오류]()  
+2.설정에서 Namespaces탭을 열어준다.  
+사진처럼 설정해주면 밑에 하단에 Namespaces탭이 나타난다.  
+![namespaces오류]()  
+![namespaces오류]()  
+![namespaces오류]()  
+#### controller가 동작하지 않는 오류
+[ANnotation 정리](https://velog.io/@gillog/Spring-Annotation-%EC%A0%95%EB%A6%AC)  
+이유는 여러가지 이다.  
+1.class 최상단에 @Controller 어노테이션을 넣었는가?  
+![어노테이션 오류]() 
+2.mapping 중복 있는지 확인한다.  
+@getMappring("/get")을 두번 넣어서 동작하지 않았다. 잘 확인하자!!  
+![어노테이션 오류]() 
+#### @GetMapping, @PostMapping import 에러
+pom.xml에서 빨간줄에 버전을 업데이트 시켜주고 프로젝트에서 우클릭 > maven > update project클릭하고 임포트하면 잘된것이다.   
+![임포트오류]()   
+
+## 기타
 ### BootStrap(2022.04.14)  
 #### BootStrap 이란?  
 부트스트랩(Bootstrap)은 웹사이트를 쉽게 만들 수 있게 도와주는 HTML, CSS, JS 프레임워크이다. 하나의 CSS로 휴대폰, 태블릿, 데스크탑까지 다양한 기기에서 작동한다. 다양한 기능을 제공하여 사용자가 쉽게 웹사이트를 제작, 유지, 보수할 수 있도록 도와준다.
@@ -84,38 +120,9 @@ Java 설정 등을 이용하기 위해서 servlet 3.0 이상 버전으로 변경
 ![부트스트랩1](https://user-images.githubusercontent.com/94879395/163536674-60ae25de-ad4a-447b-a01e-7314702fa562.PNG)  
 7. 또 부트스트랩위에 내 css코드를 입력했지만 작동하는 코드가 있고 작동하지 않는 코드 그리고 내 생각과 다르게 작동 코드가 있었다.  하지만 정말 편한 프레이워크였다. 부트스트랩을 더 공부해야 할거같다.  
 ![부트스트랩1](https://user-images.githubusercontent.com/94879395/163536679-8d98a4d8-357d-4a8d-b77b-c407e8b782da.PNG)  
-
-### 오류 및 해결 방법(※오타를 주의 하자!!)
-#### 개발환경 셋팅
-##### Spring Legacy Project 생성 오류
-이런 오류가 뜨는 이유는 여러이유가 있다.   
-![프로젝트생성오류]()  
-1.JDK버전이 너무 낮거나 높은 경우 이다. 
-처음 1.8을 사용했지만 오류가 나서 11로 변경 해줬다. 
-2.JVM을 찾기 모하여 발생하는 이유이다.  
-![프로젝트생성오류]()  
-SpringToolSuite4.ini 텍스트 파일로 열어서 그림 처럼 경로를 지정해주면 프로젝트가 잘 생성된다.  
--vm  
-C:\Program Files\Java\jdk-11.0.12\bin\javaw.exe   
-![프로젝트생성오류]()  
-##### root-context.xml파일에 Namepaces탭이 없음
-이유는 2가지이다.
-1.spring tools 3 add-on for spring을 설치를 안해서 이다.  
-스프링 마켓 플레이스에 들어가서 spring tools 3 add-on for spring 업데이트 및 인스톨을 해주자.  
-![namespaces오류]()  
-2.설정에서 Namespaces탭을 열어준다.  
-사진처럼 설정해주면 밑에 하단에 Namespaces탭이 나타난다.  
-![namespaces오류]()  
-![namespaces오류]()  
-![namespaces오류]()  
-##### controller가 동작하지 않는 오류
-[ANnotation 정리](https://velog.io/@gillog/Spring-Annotation-%EC%A0%95%EB%A6%AC)  
-이유는 여러가지 이다.  
-1.class 최상단에 @Controller 어노테이션을 넣었는가?  
-![어노테이션 오류]() 
-2.mapping 중복 있는지 확인한다.  
-@getMappring("/get")을 두번 넣어서 동작하지 않았다. 잘 확인하자!!  
-![어노테이션 오류]() 
-##### @GetMapping, @PostMapping import 에러
-pom.xml에서 빨간줄에 버전을 업데이트 시켜주고 프로젝트에서 우클릭 > maven > update project클릭하고 임포트하면 잘된것이다.   
-![임포트오류]()   
+### Spring VS SpringBoot 차이 비교
+[Spring VS SpringBoot 차이 비교](https://sas-study.tistory.com/274)  
+### REST API 란?
+[REST API 란](https://meetup.toast.com/posts/92)  
+### 데브옵스(DevOps)란?
+[DevOps란?](https://www.netapp.com/ko/devops-solutions/what-is-devops/)  
