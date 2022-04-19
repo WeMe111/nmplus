@@ -130,3 +130,15 @@ pom.xml에서 빨간줄에 버전을 업데이트 시켜주고 프로젝트에�
 [REST API 란](https://meetup.toast.com/posts/92)  
 ### 데브옵스(DevOps)란?
 [DevOps란?](https://www.netapp.com/ko/devops-solutions/what-is-devops/)  
+### GitHub코멘트 작성법
+헤더는 필수이며, 범위(scope), 본문(body), 바닥글(footer)은 선택사항입니다.  
+![깃허브코멘트](https://user-images.githubusercontent.com/94879395/163908564-0ea52a94-cbe8-4323-a43a-3746f1f67687.PNG)  
+<type>은 해당 커밋의 성격을 나타내며 아래 중 하나여야 합니다    
+![깃허브코멘트2](https://user-images.githubusercontent.com/94879395/163908587-43a504a1-4320-4bb0-a8ff-011977c6c746.PNG)  
+ <body>는 본문으로 헤더로 표현할 수 없는 상세한 내용을 적습니다.  
+헤더로 표현이 가능하다면 생략 가능합니다.  
+
+<footer>는 바닥글로 어떤 이슈에서 왔는지 같은 참조 정보들을 추가하는 용도로 사용합니다  
+예를 들어 특정 이슈를 참조하려면 close #1233 과 같이 추가하면 됩니다.  
+close는 이슈를 참조하면서 main브랜치로 푸시될 때 이슈를 닫게 됩니다.  
+[여러 커밋 메시지 예시들](https://github.com/angular/angular/commits/master)    
