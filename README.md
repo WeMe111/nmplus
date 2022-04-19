@@ -31,7 +31,7 @@
 - Apache Tomcat 8.5
 - JAVA 11  
 #### 순서(2022.04.14)  
-[1. STS 설치](#STS-설치)    
+[1. STS 설치](#1.STS-설치)    
 2. STS3 Tool 설치    
 [3. 이클립스 인코딩 설정 변경](3.이클립스-인코딩-설정-변경)    
 [4. 프로젝트 생성 및 스프링 버전 변경](4.프로젝트-생성-및-스프링-버전-변경)   
@@ -161,10 +161,12 @@ pom.xml에서 빨간줄에 버전을 업데이트 시켜주고 프로젝트에�
 <footer>는 바닥글로 어떤 이슈에서 왔는지 같은 참조 정보들을 추가하는 용도로 사용합니다  
 예를 들어 특정 이슈를 참조하려면 close #1233 과 같이 추가하면 됩니다.  
 close는 이슈를 참조하면서 main브랜치로 푸시될 때 이슈를 닫게 됩니다.  
+ 
 [여러 커밋 메시지 예시들](https://github.com/angular/angular/commits/master)  
  
-### 에러 및 예외상황 읽기
+### 에러 및 예외상황 읽기  
 [에러 및 예외상황 읽기](https://uxandprogramming.tistory.com/5)  
+[Java - 스택 트레이스(Stack Trace) 읽기](https://jaehoney.tistory.com/51)  
  
 ## 후기
 환경변수를 너무 쉽게 본거같다.   
