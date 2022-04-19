@@ -66,39 +66,43 @@ Java 설정 등을 이용하기 위해서 servlet 3.0 이상 버전으로 변경
 
 ## 오류 및 해결 방법(※오타를 주의 하자!!)
 ### 개발환경 셋팅
+#### 환경 변수 오류
+개인 컴퓨터로 JDK11을 설치하고 환경변수를 실수없이 설정했는데, 적용이 안됬다. 이유는 간단했다.  
+Java가 이중설정이 되어 있었다.  
+![환경변수 오류](https://user-images.githubusercontent.com/94879395/163906036-e4b6a0ab-554b-4536-8ddd-440f72dfb233.PNG)  
+Path에 Java가 있는지 확인 해보자 있으면 JAVA_HOME 빼고 삭제 해준다.  
+![환경변수 오류](https://user-images.githubusercontent.com/94879395/163906140-a27ae552-f4fd-4c6b-81ab-a638bf57eb86.PNG)  
 #### Spring Legacy Project 생성 오류
 이런 오류가 뜨는 이유는 여러이유가 있다.   
-![프로젝트생성오류]()  
+![프로젝트생성오류](https://user-images.githubusercontent.com/94879395/163904168-0866960a-8ca2-4198-9cab-858a58ea0647.PNG)  
 1.JDK버전이 너무 낮거나 높은 경우 이다. 
-처음 1.8을 사용했지만 오류가 나서 11로 변경 해줬다. 
-2.JVM을 찾기 모하여 발생하는 이유이다.  
-![프로젝트생성오류]()  
+처음 1.8을 사용했지만 오류가 나서 11로 변경 해줬다. 환경변수에 들어가서 변경해주자.  
+2.JVM을 찾지 못하여 발생하는 이유이다.  
 SpringToolSuite4.ini 텍스트 파일로 열어서 그림 처럼 경로를 지정해주면 프로젝트가 잘 생성된다.  
 -vm  
 C:\Program Files\Java\jdk-11.0.12\bin\javaw.exe   
-![프로젝트생성오류]()  
+![프로젝트생성오류](https://user-images.githubusercontent.com/94879395/163904174-2eddaa25-83de-4477-a35a-bc0b80668a2f.PNG)  
 #### root-context.xml파일에 Namepaces탭이 없음
 이유는 2가지이다.
 1.spring tools 3 add-on for spring을 설치를 안해서 이다.  
 스프링 마켓 플레이스에 들어가서 spring tools 3 add-on for spring 업데이트 및 인스톨을 해주자.  
-![namespaces오류]()  
+![namespaces오류](https://user-images.githubusercontent.com/94879395/163904182-ceb5af16-a4c8-4cb2-9061-3b2a53d36c08.PNG)  
 2.설정에서 Namespaces탭을 열어준다.  
 사진처럼 설정해주면 밑에 하단에 Namespaces탭이 나타난다.  
-![namespaces오류]()  
-![namespaces오류]()  
-![namespaces오류]()  
+![namespaces오류](https://user-images.githubusercontent.com/94879395/163904178-b65a2d9d-1515-4436-88aa-866f4795f342.PNG)  
+![namespaces오류](https://user-images.githubusercontent.com/94879395/163904180-fdb76004-2583-4452-808a-cf33e50885ff.PNG)  
+![namespaces오류](https://user-images.githubusercontent.com/94879395/163904176-b0d2e602-5d67-47b9-a941-8fc7cbc154bb.PNG)  
 #### controller가 동작하지 않는 오류
 [ANnotation 정리](https://velog.io/@gillog/Spring-Annotation-%EC%A0%95%EB%A6%AC)  
 이유는 여러가지 이다.  
 1.class 최상단에 @Controller 어노테이션을 넣었는가?  
-![어노테이션 오류]() 
+![어노테이션 오류](https://user-images.githubusercontent.com/94879395/163904173-37ac5b2c-ca74-4a09-870e-f5bd73e5f872.PNG)  
 2.mapping 중복 있는지 확인한다.  
 @getMappring("/get")을 두번 넣어서 동작하지 않았다. 잘 확인하자!!  
-![어노테이션 오류]() 
-#### @GetMapping, @PostMapping import 에러
-pom.xml에서 빨간줄에 버전을 업데이트 시켜주고 프로젝트에서 우클릭 > maven > update project클릭하고 임포트하면 잘된것이다.   
-![임포트오류]()   
-
+![어노테이션 오류](https://user-images.githubusercontent.com/94879395/163904185-253502e7-8c79-40b6-a1e9-a8f8cc4addf9.PNG)  
+#### @GetMapping, @PostMapping import 에러 
+pom.xml에서 빨간줄에 버전을 업데이트 시켜주고 프로젝트에서 우클릭 > maven > update project클릭하고 임포트하면 잘된것이다.  
+![임포트오류](https://user-images.githubusercontent.com/94879395/163904183-f3a4e26b-8dda-4708-ba1f-c252fa8515a5.PNG)   
 ## 기타
 ### BootStrap(2022.04.14)  
 #### BootStrap 이란?  
